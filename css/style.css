@@ -45,6 +45,10 @@ header section {
     width: 100%;
 }
 
+#titulo {
+    margin-left: 120px;
+}
+
 /* !MODO OSCURO */
 
 .switch {
@@ -205,4 +209,14 @@ a:hover::after {
 #mail:hover {
     transition: .3s;
     color: white;
+}
+
+
+@media only screen and (max-width: 476px) {
+    footer {
+        width: 100%;
+    }
+    a {
+        margin-inline: 10px;
+    }
 }
