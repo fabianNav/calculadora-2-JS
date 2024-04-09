@@ -5,15 +5,17 @@
 }
 
 [data-theme="light"] {
-    --background: rgba(255, 85, 0, 0.498);
-    --primary: #a46;
+    --background: #67C6E3;
+    --primary: #5356FF;
     --text: #000;
+    --secondary: #000;
 }
 
 [data-theme="dark"] {
-    --background: rgba(0, 0, 0, 0.728);
-    --primary: rgb(53, 40, 168);
-    --text: #e69f9f;
+    --background: #00214d;
+    --primary: #a0153fc7;
+    --text: #F7C566;
+    --secondary: #F7C566;
 }
 
 body {
@@ -37,6 +39,64 @@ header {
     justify-content: center;
 }
 
+header section {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+/* !MODO OSCURO */
+
+.switch {
+    position: relative;
+    display: flex;
+    width: 60px;
+    height: 34px;
+    margin-right: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.sliderClass {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--text);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.sliderClass:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--background);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.sliderClass {
+    background-color: var(--secondary);
+}
+
+input:checked+.sliderClass:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
 
 
 
@@ -49,7 +109,7 @@ header {
     width: 300px;
     height: fit-content;
     padding-bottom: 20px;
-    box-shadow: 30px 10px 5px var(--background);
+    box-shadow: 30px 10px 52px var(--text);
 }
 
 .calculadoraContainer section {
@@ -66,8 +126,8 @@ header {
 
 #display {
     text-align: center;
-    background-color: var(--text);
-    color: var(--primary);
+    background-color: var(--background);
+    color: var(--text);
 }
 
 .filas {
@@ -134,12 +194,12 @@ a:hover::after {
 
 #linkedin:hover {
     transition: .3s;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 #whatsapp:hover {
     transition: .3s;
-    color: rgb(0, 255, 0);
+    color: #00ff00;
 }
 
 #mail:hover {

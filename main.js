@@ -17,3 +17,17 @@ buttons.forEach((btn) => {
     }
   })
 } )
+
+//TODO MOD OSCURO
+
+const colorDelSistema = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+const slider = document.getElementById('slider');
+const setTheme = (tema) => {
+  document.documentElement.setAttribute('data-theme', tema);
+  localStorage.setItem('theme', tema);
+}
+slider.addEventListener('click', () => {
+  let switchToTheme = localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+  setTheme(switchToTheme);
+});
+setTheme(localStorage.getItem('theme') || colorDelSistema);
