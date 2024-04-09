@@ -1,13 +1,57 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Calculadora</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header>
+      <section>
+        <h1>Calculadora</h1>
+      </section>
+    </header>
+    
+
+    <main>
+      <section id="calculadora">
+        <input type="text" name="display" id="display">
+      </section>
+      <section>
+        <br>
+        <article>
+          <button id="resetear" class="operador">AC</button>
+          <button id="borrar" class="operador">DE</button>
+          <button id="decimal" class="operador">.</button>
+          <button id="divisor" class="operador">/</button>
+
+          <button id="7">7</button>
+          <button id="8">8</button>
+          <button id="9">9</button>
+          <button id="multiplicar" class="operador">*</button>
+
+          <button id="4">4</button>
+          <button id="5">5</button>
+          <button id="6">6</button>
+          <button id="restar" class="operador">-</button>
+
+          <button id="1">1</button>
+          <button id="2">2</button>
+          <button id="3">3</button>
+          <button id="sumar" class="operador">+</button>
+          
+          <button id="00">00</button>
+          <button id="0">0</button>
+          <button id="igual" class="igual operador">=</button>
+        </article>
+      </section>
+    </main>
+    
+    
+    <footer>
+
+    </footer>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
