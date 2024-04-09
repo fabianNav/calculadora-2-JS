@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+[data-theme="light"] {
+    --background: rgba(255, 85, 0, 0.498);
+    --primary: #a46;
+    --text: #000;
+}
+
+[data-theme="dark"] {
+    --background: rgba(0, 0, 0, 0.728);
+    --primary: rgb(53, 40, 168);
+    --text: #e69f9f;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+
+/* TODO HEADER */
+
+header {
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: var(--primary);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* TODO MAIN */
+
+.calculadoraContainer {
+    background-color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: fit-content;
+    padding-bottom: 20px;
+}
+
+.calculadoraContainer section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+#calculadora {
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#display {
+    text-align: center;
+    background-color: var(--text);
+    color: var(--primary);
+}
+
+.filas {
+    margin-bottom: 10px;
+}
+
+.calculadoraContainer button {
+    width: 50px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border: 2px solid var(--background);
+    color: var(--text);
+    font-size: 30px;
+    margin-right: 20px;
+    transition: .5s;
+}
+
+.calculadoraContainer button:hover {
+    background-color: var(--background);
+}
+
+
+/* TODO FOOTER */
+
+footer {
+    width: 100%;
+    border-top: 1px solid var(--primary);
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+a {
+    color: var(--text);
+    font-size: 60px;
+    margin-inline: 30px;
+    position: relative;
+}
+
+a::after {
+    content: "";
+    background: var(--text);
+    width: calc(100% + 20px);
+    mix-blend-mode: color-burn;
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: -10px;
+    transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    border-radius: 30px;
+}
+
+a:hover::after {
+    height: calc(100% + 8px);
+}
+
+#github:hover {
+    transition: .3s;
+    color: violet;
+}
+
+#linkedin:hover {
+    transition: .3s;
+    color: white;
+}
+
+#whatsapp:hover {
+    transition: .3s;
+    color: rgb(0, 255, 0);
+}
+
+#mail:hover {
+    transition: .3s;
+    color: white;
+}

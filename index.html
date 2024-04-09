@@ -1,57 +1,75 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculadora</title>
-  </head>
-  <body>
-    <header>
-      <section>
-        <h1>Calculadora</h1>
-      </section>
-    </header>
-    
 
-    <main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora</title>
+</head>
+
+<body data-theme="dark">
+  <header>
+    <section>
+      <h1>Calculadora</h1>
+    </section>
+  </header>
+
+
+  <main>
+    <section class="calculadoraContainer">
       <section id="calculadora">
         <input type="text" name="display" id="display">
       </section>
       <section>
-        <br>
-        <article>
+        <div class="filas fila1">
           <button id="resetear" class="operador">AC</button>
           <button id="borrar" class="operador">DE</button>
           <button id="decimal" class="operador">.</button>
           <button id="divisor" class="operador">/</button>
-
+        </div>
+        <div class="filas fila2">
           <button id="7">7</button>
           <button id="8">8</button>
           <button id="9">9</button>
           <button id="multiplicar" class="operador">*</button>
-
+        </div>
+        <div class="filas fila3">
           <button id="4">4</button>
           <button id="5">5</button>
           <button id="6">6</button>
           <button id="restar" class="operador">-</button>
-
+        </div>
+        <div class="filas fila4">
           <button id="1">1</button>
           <button id="2">2</button>
           <button id="3">3</button>
           <button id="sumar" class="operador">+</button>
-          
+        </div>
+        <div class="filas fila5">
           <button id="00">00</button>
           <button id="0">0</button>
           <button id="igual" class="igual operador">=</button>
-        </article>
+        </div>
       </section>
-    </main>
-    
-    
-    <footer>
+    </section>
+  </main>
 
-    </footer>
 
-    <script type="module" src="/main.js"></script>
-  </body>
+  <footer>
+    <section>
+      <article>
+        <a id="github" href="https://github.com/fabianNav"><i class="fa-brands fa-github"></i></a>
+        <a id="linkedin" href="https://www.linkedin.com/in/luis-fabian-navarro-a9a42a217/"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a id="whatsapp" href="https://wa.link/4vfimv"><i class="fa-brands fa-whatsapp"></i></a>
+        <a id="mail" href="mailto:time50851@gmail.com"><i class="fa-solid fa-at"></i>
+        </a>
+      </article>
+    </section>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+  <script src="https://kit.fontawesome.com/5095e6fda6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
 </html>
